@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical</title>
+</head>
+<body>
+    <div id="change">Abhishek</div>
+</body>
+<script>
+    const textElement = document.getElementById("change");
+    let increasing = true;
+    let fontSize = 20;
+    function transition() {
+        if (increasing) {
+            fontSize += 2;
+            textElement.style.color = "green"; 
+            if (fontSize >= 50) {
+                increasing = false;
+            }
+        } 
+        else {
+            fontSize -= 2;
+            textElement.style.color = "red";
+            if (fontSize <= 20) {
+                increasing = true;
+            }
+        }
+        textElement.style.fontSize = fontSize + "px";
+    }
+    setInterval(transition, 100);
+    </script>
+</body>
+</html>
