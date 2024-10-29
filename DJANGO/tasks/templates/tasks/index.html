@@ -10,5 +10,5 @@
             <li> no tasks </li>
         {% endfor %}
     </ul>
-    <a href="/tasks/add/">Add a New Task</a>
+    <a href="{% url 'tasks:add' %}">Add Tasks</a>
 {% endblock %}
